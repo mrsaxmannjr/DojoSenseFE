@@ -4,7 +4,7 @@
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 150px;
+  height: 90px;
 }
 
 .App-header {
@@ -26,3 +26,28 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.hidden {
+  display: none;
+}
+
+.google-map {
+  height: 300px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+.dojo-list {
+  flex-direction: column;
+  width: 50vw;
+}
+
+form {
+  display: flex;
+  flex-flow: column;
+}
+

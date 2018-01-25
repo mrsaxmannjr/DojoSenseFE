@@ -49,5 +49,16 @@ main {
 form {
   display: flex;
   flex-flow: column;
+  border: solid black;
+  padding: 1rem;
+  padding-top: 0rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-title {
+  border: solid black;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 

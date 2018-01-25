@@ -1,13 +1,16 @@
 import React from "react";
-import { Form } from "./Form.js";
+import Form from "./Form";
 
-export class Aside extends React.Component {
+class Aside extends React.Component {
+
   render() {
     return (
       <aside id="side-bar">
         <h3>Add a Style</h3>
-        <Form getFormData={this.props.getFormData} />
+        <Form getFormDataCreateStyle={this.props.getFormDataCreateStyle} />
       </aside>
-    )
+    );
   }
 }
+
+export default Aside;

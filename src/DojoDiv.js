@@ -6,8 +6,6 @@ const DojoDiv = props => {
     const preview = document.querySelector(`#${event.target.textContent}`);
     preview.classList.toggle("hidden");
   }
-
-  console.log(props.data);
   return props.data.style.map((item, index) => {
     return (
       <div className="dojo-div">

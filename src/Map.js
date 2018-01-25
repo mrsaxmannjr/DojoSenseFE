@@ -9,7 +9,6 @@ export default class Map extends Component {
     zoom: 11
   }
   render() {
-    console.log(this.props);
     return (
       <div className='google-map'>
         <GoogleMapReact

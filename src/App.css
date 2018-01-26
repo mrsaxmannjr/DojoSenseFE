@@ -1,3 +1,11 @@
+html {
+  background-image: url("./dojo.jpeg") ;
+			background-position: center center;
+			background-repeat:  no-repeat;
+			background-attachment: fixed;
+			background-size: contain;
+}
+
 .App {
   text-align: center;
 }
@@ -37,27 +45,33 @@
 
 main {
   display: flex;
-  justify-content: center;
   justify-content: space-around;
 }
 
 .dojo-list {
-  flex-direction: column;
   width: 50vw;
+}
+
+.dojo-div {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  padding-top: 0rem;
+  background: linear-gradient( rgba(159,57,49,0.95), rgba(231, 143, 137, 0.925));
+
 }
 
 form {
   display: flex;
   flex-flow: column;
-  border: solid black;
   padding: 1rem;
   padding-top: 0rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  background: linear-gradient( rgba(159,57,49,0.95), rgba(231, 143, 137, 0.925));
 }
 
-.form-title {
-  border: solid black;
+.form-title, .style-name {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }

@@ -9,7 +9,7 @@ const DojoDiv = props => {
   return props.data.style.map((item, index) => {
     return (
       <div className="dojo-div">
-        <h3>{item.style} (id#{item.id})</h3>
+        <h3 className="style-name">{item.style} (id#{item.id})</h3>
         <iframe title={item.style} src={item.video} alt={item.style} />
         <p>{item.summary}</p>
         <h4>Click the button to see {item.style} dojos in Colorado</h4>

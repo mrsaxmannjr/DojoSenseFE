@@ -7,7 +7,7 @@ html {
 }
 
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .App-logo {
@@ -16,10 +16,10 @@ html {
 }
 
 .App-header {
-  background-color: #222;
+  background: linear-gradient( rgba(159,57,49,0.95), rgba(231, 143, 137, 0.925));
   height: 150px;
   padding: 20px;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .App-title {

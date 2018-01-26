@@ -19,7 +19,7 @@ class App extends Component {
     this.submitHandlerListDojo = this.submitHandlerListDojo.bind(this);
     this.submitHandlerDeleteStyle = this.submitHandlerDeleteStyle.bind(this);
     this.submitHandlerDeleteDojo = this.submitHandlerDeleteDojo.bind(this);
-
+    this.submitHandlerListAll = this.submitHandlerListAll.bind(this);
   }
   componentDidMount() {
     fetch("https://dojo-sense.herokuapp.com/")
@@ -36,66 +36,52 @@ class App extends Component {
 
   getFormDataCreateStyle() {
     var data = new FormData(document.getElementById("createStyleForm"));
-    console.log("Create Style Form Data is: ", {
-      style: data.get("style"),
-      summary: data.get("summary"),
-      video: data.get("video")
-    });
-    return {
+    var form = {
       style: data.get("style"),
       summary: data.get("summary"),
       video: data.get("video")
     };
+    document.getElementById("createStyleForm").reset()
+    return form;
   }
 
   getFormDataCreateDojo() {
     var data = new FormData(document.getElementById("createDojoForm"));
-    console.log("Create Dojo Form Data is: ", {
-      dojo: data.get("dojo"),
-      style: data.get("style"),
-      url: data.get("url"),
-      latitude: data.get("latitude"),
-      longitude: data.get("longitude")
-    });
-    return {
+    var form = {
       dojo: data.get("dojo"),
       style: data.get("style"),
       url: data.get("url"),
       latitude: data.get("latitude"),
       longitude: data.get("longitude")
     };
+    document.getElementById("createDojoForm").reset()
+    return form;
   }
 
   getFormDataUpdateStyle() {
     var data = new FormData(document.getElementById("updateStyleForm"));
-    console.log("Update Style Form Data is: ", {
-      id: data.get("id"),
-      style: data.get("style"),
-      summary: data.get("summary"),
-      video: data.get("video")
-    });
-    return {
+    var form = {
       id: data.get("id"),
       style: data.get("style"),
       summary: data.get("summary"),
       video: data.get("video")
     };
+    document.getElementById("updateStyleForm").reset()
+    return form;
   }
 
   getFormDataUpdateDojo() {
     var data = new FormData(document.getElementById("updateDojoForm"));
-    console.log("Update Dojo Form Data is: ", {
+    var form = {
       id: data.get("id"),
-      url: data.get("url"),
-      latitude: data.get("latitude"),
-      longitude: data.get("longitude")
-    });
-    return {
-      id: data.get("id"),
+      dojo: data.get("dojo"),
+      style: data.get("style"),
       url: data.get("url"),
       latitude: data.get("latitude"),
       longitude: data.get("longitude")
     };
+    document.getElementById("updateDojoForm").reset()
+    return form;
   }
 
   submitHandlerCreateStyle(event) {
@@ -196,6 +182,20 @@ class App extends Component {
       .catch(err => console.log(err));
   }
 
+  submitHandlerListAll(event) {
+    event.preventDefault();
+    fetch("https://dojo-sense.herokuapp.com/")
+      .then(response => response.json())
+      .then(response => {
+        this.setState({
+          style: response.style,
+          dojo: response.dojo
+        });
+        console.log("the state is: ", this.state);
+      })
+      .catch(err => console.log(err));
+  }
+
   render() {
     return (
       <div className="App">
@@ -228,6 +228,7 @@ class App extends Component {
             getFormDataListDojo={this.submitHandlerListDojo}
             getFormDataDeleteStyle={this.submitHandlerDeleteStyle}
             getFormDataDeleteDojo={this.submitHandlerDeleteDojo}
+            getFormDataListAll={this.submitHandlerListAll}
           />
         </main>
       </div>

@@ -14,6 +14,7 @@ class Aside extends React.Component {
           getFormDataListDojo={this.props.getFormDataListDojo}
           getFormDataDeleteStyle={this.props.getFormDataDeleteStyle}
           getFormDataDeleteDojo={this.props.getFormDataDeleteDojo}
+          getFormDataListAll={this.props.getFormDataListAll}
         />
       </aside>
     );

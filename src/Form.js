@@ -3,6 +3,10 @@ import React from "react";
 function Form(props) {
   return (
     <div>
+      <form id="listAllForm" onSubmit={props.getFormDataListAll}>
+        <h3 className="form-title">LIST ALL</h3>
+        <input type="submit" name="submit" value="Submit" />
+      </form>
       <form id="createStyleForm" onSubmit={props.getFormDataCreateStyle}>
         <h3 className="form-title">ADD A STYLE</h3>
         <label htmlFor="style">New Style</label>
@@ -18,7 +22,7 @@ function Form(props) {
         <label htmlFor="dojo">New Dojo</label>
         <input type="text" name="dojo" />
         <label htmlFor="style">Style</label>
-        <input type="text" name="style" />
+        <input type="text" name="style" placeholder="You must choose an existing style" />
         <label htmlFor="url">Enter URL for the dojo</label>
         <input type="text" name="url" />
         <label htmlFor="latitude">Enter latitude of dojo</label>
@@ -31,6 +35,8 @@ function Form(props) {
         <h3 className="form-title">UPDATE A STYLE</h3>
         <label htmlFor="id">Enter id# of Style to update</label>
         <input id="styleID" type="text" name="id" />
+        <label htmlFor="style">Style Name</label>
+        <input type="text" name="style" />
         <label htmlFor="summary">Summary of this Style</label>
         <textarea name="summary" rows="8" cols="40" />
         <label htmlFor="video">Enter URL of Style video</label>
@@ -41,6 +47,10 @@ function Form(props) {
         <h3 className="form-title">UPDATE A DOJO</h3>
         <label htmlFor="id">Enter id# of Dojo to update</label>
         <input id="dojoID" type="text" name="id" />
+        <label htmlFor="dojo">Dojo Name</label>
+        <input type="text" name="dojo" />
+        <label htmlFor="style">Style</label>
+        <input type="text" name="style" placeholder="You must choose an existing style" />
         <label htmlFor="url">Enter URL update for the dojo</label>
         <input type="text" name="url" />
         <label htmlFor="latitude">Enter latitude update for dojo</label>

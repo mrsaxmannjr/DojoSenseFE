@@ -1,7 +1,8 @@
 # Welcome to Dojo Sense
 Welcome to the one-stop-shop for all your Dragon Ball FighterZ needs! Here you can find details on how to play, the different control schemes, character stats and move-sets, create a custom team and more!
-* [Live site](https://dbfzguide.com/index.html)
-* [Back End code](https://github.com/mrsaxmannjr/DBZFGuide-Server)
+* [Live site](https://tower-fe.herokuapp.com/)
+* [Deployed API URL](https://dojo-sense.herokuapp.com/)
+* [Code Repo used](https://github.com/istarkov/google-map-react).
 
 ![about]()
 

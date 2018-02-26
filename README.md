@@ -25,7 +25,7 @@ There is a form to add, update, delete and list a specific item by id for all st
 ![CRUD]()
 
 # Installation
-Fork [this repo](https://github.com/mrsaxmannjr/tower-frontend) and clone it locally.
+Fork [this repo](https://github.com/mrsaxmannjr/dojo-sense-Frontend) and clone it locally.
 ```
 npm install
 

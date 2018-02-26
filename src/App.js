@@ -9,7 +9,7 @@ class App extends Component {
     super(props);
     this.state = {
       style: [],
-      dojo: []
+      dojo: [],
     };
     this.submitHandlerCreateStyle = this.submitHandlerCreateStyle.bind(this);
     this.submitHandlerCreateDojo = this.submitHandlerCreateDojo.bind(this);
@@ -27,7 +27,7 @@ class App extends Component {
       .then(response => {
         this.setState({
           style: response.style,
-          dojo: response.dojo
+          dojo: response.dojo,
         });
         console.log("the state is: ", this.state);
       })
@@ -35,52 +35,52 @@ class App extends Component {
   }
 
   getFormDataCreateStyle() {
-    var data = new FormData(document.getElementById("createStyleForm"));
-    var form = {
+    let data = new FormData(document.getElementById("createStyleForm"));
+    let form = {
       style: data.get("style"),
       summary: data.get("summary"),
-      video: data.get("video")
+      video: data.get("video"),
     };
-    document.getElementById("createStyleForm").reset()
+    document.getElementById("createStyleForm").reset();
     return form;
   }
 
   getFormDataCreateDojo() {
-    var data = new FormData(document.getElementById("createDojoForm"));
-    var form = {
+    let data = new FormData(document.getElementById("createDojoForm"));
+    let form = {
       dojo: data.get("dojo"),
       style: data.get("style"),
       url: data.get("url"),
       latitude: data.get("latitude"),
-      longitude: data.get("longitude")
+      longitude: data.get("longitude"),
     };
-    document.getElementById("createDojoForm").reset()
+    document.getElementById("createDojoForm").reset();
     return form;
   }
 
   getFormDataUpdateStyle() {
-    var data = new FormData(document.getElementById("updateStyleForm"));
-    var form = {
+    let data = new FormData(document.getElementById("updateStyleForm"));
+    let form = {
       id: data.get("id"),
       style: data.get("style"),
       summary: data.get("summary"),
-      video: data.get("video")
+      video: data.get("video"),
     };
-    document.getElementById("updateStyleForm").reset()
+    document.getElementById("updateStyleForm").reset();
     return form;
   }
 
   getFormDataUpdateDojo() {
-    var data = new FormData(document.getElementById("updateDojoForm"));
-    var form = {
+    let data = new FormData(document.getElementById("updateDojoForm"));
+    let form = {
       id: data.get("id"),
       dojo: data.get("dojo"),
       style: data.get("style"),
       url: data.get("url"),
       latitude: data.get("latitude"),
-      longitude: data.get("longitude")
+      longitude: data.get("longitude"),
     };
-    document.getElementById("updateDojoForm").reset()
+    document.getElementById("updateDojoForm").reset();
     return form;
   }
 
@@ -89,7 +89,7 @@ class App extends Component {
     fetch("https://dojo-sense.herokuapp.com/style", {
       method: "POST",
       body: JSON.stringify(this.getFormDataCreateStyle()),
-      headers: new Headers({ "Content-Type": "application/json" })
+      headers: new Headers({ "Content-Type": "application/json" }),
     })
       .then(response => this.componentDidMount())
       .catch(err => console.log(err));
@@ -100,7 +100,7 @@ class App extends Component {
     fetch("https://dojo-sense.herokuapp.com/dojo", {
       method: "POST",
       body: JSON.stringify(this.getFormDataCreateDojo()),
-      headers: new Headers({ "Content-Type": "application/json" })
+      headers: new Headers({ "Content-Type": "application/json" }),
     })
       .then(response => this.componentDidMount())
       .catch(err => console.log(err));
@@ -108,10 +108,10 @@ class App extends Component {
 
   submitHandlerUpdateStyle(event) {
     event.preventDefault();
-    fetch("https://dojo-sense.herokuapp.com/style/" + document.getElementById("styleID").value, {
+    fetch(`https://dojo-sense.herokuapp.com/style/${  document.getElementById("styleID").value}`, {
       method: "PUT",
       body: JSON.stringify(this.getFormDataUpdateStyle()),
-      headers: new Headers({ "Content-Type": "application/json" })
+      headers: new Headers({ "Content-Type": "application/json" }),
     })
       .then(response => this.componentDidMount())
       .catch(err => console.log(err));
@@ -119,10 +119,10 @@ class App extends Component {
 
   submitHandlerUpdateDojo(event) {
     event.preventDefault();
-    fetch("https://dojo-sense.herokuapp.com/dojo/" + document.getElementById("dojoID").value, {
+    fetch(`https://dojo-sense.herokuapp.com/dojo/${  document.getElementById("dojoID").value}`, {
       method: "PUT",
       body: JSON.stringify(this.getFormDataUpdateDojo()),
-      headers: new Headers({ "Content-Type": "application/json" })
+      headers: new Headers({ "Content-Type": "application/json" }),
     })
       .then(response => this.componentDidMount())
       .catch(err => console.log(err));
@@ -130,7 +130,7 @@ class App extends Component {
 
   submitHandlerListStyle(event) {
     event.preventDefault();
-    fetch("https://dojo-sense.herokuapp.com/style/" + document.getElementById("listStyleID").value)
+    fetch(`https://dojo-sense.herokuapp.com/style/${  document.getElementById("listStyleID").value}`)
       .then(response => {
         console.log("initial", response);
         return response.json();
@@ -147,7 +147,7 @@ class App extends Component {
 
   submitHandlerListDojo(event) {
     event.preventDefault();
-    fetch("https://dojo-sense.herokuapp.com/dojo/" + document.getElementById("listDojoID").value)
+    fetch(`https://dojo-sense.herokuapp.com/dojo/${  document.getElementById("listDojoID").value}`)
       .then(response => {
         console.log("initial", response);
         return response.json();
@@ -164,9 +164,9 @@ class App extends Component {
 
   submitHandlerDeleteStyle(event) {
     event.preventDefault();
-    fetch("https://dojo-sense.herokuapp.com/style/" + document.getElementById("deleteStyleID").value, {
+    fetch(`https://dojo-sense.herokuapp.com/style/${  document.getElementById("deleteStyleID").value}`, {
       method: "DELETE",
-      headers: new Headers({ "Content-Type": "application/json" })
+      headers: new Headers({ "Content-Type": "application/json" }),
     })
       .then(response => this.componentDidMount())
       .catch(err => console.log(err));
@@ -174,9 +174,9 @@ class App extends Component {
 
   submitHandlerDeleteDojo(event) {
     event.preventDefault();
-    fetch("https://dojo-sense.herokuapp.com/dojo/" + document.getElementById("deleteDojoID").value, {
+    fetch(`https://dojo-sense.herokuapp.com/dojo/${  document.getElementById("deleteDojoID").value}`, {
       method: "DELETE",
-      headers: new Headers({ "Content-Type": "application/json" })
+      headers: new Headers({ "Content-Type": "application/json" }),
     })
       .then(response => this.componentDidMount())
       .catch(err => console.log(err));
@@ -189,7 +189,7 @@ class App extends Component {
       .then(response => {
         this.setState({
           style: response.style,
-          dojo: response.dojo
+          dojo: response.dojo,
         });
         console.log("the state is: ", this.state);
       })

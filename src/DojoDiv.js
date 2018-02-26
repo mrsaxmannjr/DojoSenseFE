@@ -12,7 +12,7 @@ const DojoDiv = props => {
       <iframe title={item.style} src={item.video} alt={item.style} />
       <p>{item.summary}</p>
       <h4>Click the button to see {item.style} dojos in Colorado</h4>
-      <button onClick={togglePreview}>Dojos for: {item.style}</button>
+      <button onClick={togglePreview}>{item.style}</button>
       {props.data.dojo.map((item2, index) => {
         if (item.style === item2.style) {
           return (

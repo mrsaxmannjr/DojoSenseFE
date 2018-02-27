@@ -1,5 +1,7 @@
 # Welcome to Dojo Sense
 Use Dojo Sense to browse different Martial Art styles, see an overview video, read a description and find dojos(schools) that teach the selected art.  The school location will be plotted on Google maps.  User's can also create, update and delete and enrty as they deem necessary.
+<img width="830" alt="screen shot 2018-02-27 at 11 36 01 am" src="https://user-images.githubusercontent.com/26389841/36747521-74c38a80-1bb2-11e8-962c-112900c7fa17.png">
+
 * [Live site](https://tower-fe.herokuapp.com/)
 
 Dojo Sense is backed by a custom built API with full CRUD functionality.

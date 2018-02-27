@@ -24,7 +24,7 @@ When you click on the style specific button, you will be shown dojos(schools) fo
 ## CRUD functionality:
 There is a form to add, update, delete and list a specific item by id for all styles and dojos.
 
-![CRUD]()
+<img width="363" alt="screen shot 2018-02-27 at 11 40 10 am" src="https://user-images.githubusercontent.com/26389841/36747733-053d1496-1bb3-11e8-99e0-fa3167aa8e2b.png">
 
 # Installation
 Fork [this repo](https://github.com/mrsaxmannjr/Dojo-Sense-Frontend) and clone it locally.

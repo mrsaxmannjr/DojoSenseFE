@@ -14,7 +14,7 @@ The maps were created using the google-map-react library
 ## Style:
 Here you can read about the various Martial Art styles and watch an introductory video on each.
 
-![style]()
+<img width="720" alt="screen shot 2018-02-27 at 11 37 04 am" src="https://user-images.githubusercontent.com/26389841/36747579-94c81968-1bb2-11e8-8a15-e32af99c230a.png">
 
 ## Dojo
 When you click on the style specific button, you will be shown dojos(schools) for the specific martial art on a Google map.

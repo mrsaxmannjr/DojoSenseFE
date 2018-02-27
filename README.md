@@ -19,7 +19,7 @@ Here you can read about the various Martial Art styles and watch an introductory
 ## Dojo
 When you click on the style specific button, you will be shown dojos(schools) for the specific martial art on a Google map.
 
-![dojo]()
+<img width="719" alt="screen shot 2018-02-27 at 11 38 41 am" src="https://user-images.githubusercontent.com/26389841/36747657-ce4f9fbc-1bb2-11e8-86a9-43784ace314b.png">
 
 ## CRUD functionality:
 There is a form to add, update, delete and list a specific item by id for all styles and dojos.

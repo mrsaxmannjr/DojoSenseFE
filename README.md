@@ -4,7 +4,7 @@ Use Dojo Sense to browse different Martial Art styles, see an overview video, re
 
 * [Live site](https://tower-fe.herokuapp.com/)
 
-Dojo Sense is backed by a custom built API with full CRUD functionality.
+Dojo Sense is backed by a custom built API with full CRUDL functionality.
 * [Deployed API URL](https://dojo-sense.herokuapp.com/)
 
 The maps were created using the google-map-react library
